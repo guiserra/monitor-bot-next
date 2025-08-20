@@ -4,8 +4,8 @@ import { useState, useRef } from 'react'
 import UserField from '@/components/UserField'
 
 export default function EditUser() {
-  const [username, setUsername] = useState('Admin')
-  const [password, setPassword] = useState('dadwdad')
+  const [username, setUsername] = useState('admin')
+  const [password, setPassword] = useState('admin')
   const [email, setEmail] = useState('admin@admin.com')
   const [photo, setPhoto] = useState<string | null>(null) // URL da foto
   const fileInputRef = useRef<HTMLInputElement | null>(null)
@@ -44,13 +44,13 @@ export default function EditUser() {
         <div className="flex flex-row gap-4">
           <div className="flex flex-col items-center justify-center w-64">
             <div
-              className="w-24 h-24 bg-gray-200 rounded-full flex items-center justify-center overflow-hidden cursor-pointer hover:opacity-80"
+              className="w-24 h-24 bg-amber-500 rounded-full flex items-center justify-center overflow-hidden cursor-pointer hover:opacity-80"
               onClick={handlePhotoClick}
             >
               {photo ? (
                 <img src={photo} alt="Foto do usuário" className="w-full h-full object-cover" />
               ) : (
-                <span className="text-gray-500">Imagem</span>
+                <span className="text-white">Imagem</span>
               )}
             </div>
             <input
